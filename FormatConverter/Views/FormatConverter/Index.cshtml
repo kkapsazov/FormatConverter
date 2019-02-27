@@ -1,0 +1,20 @@
+@{
+    ViewBag.Title = "Upload";
+    Layout = "_Layout";
+}
+
+<div>
+    <form method="post" enctype="multipart/form-data" asp-controller="FormatConverter" asp-action="Index">
+        <div class="form-group">
+            <div class="col-md-10">
+                <p>Upload one or more files using this form. The XML files will be converted to JSON. The JSON files will be converted to XML. All other file format will be ignored.</p>
+                <input type="file" name="files" multiple />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-10">
+                <input type="submit" class="btn btn-info" value="Upload" />
+            </div>
+        </div>
+    </form>
+</div>
